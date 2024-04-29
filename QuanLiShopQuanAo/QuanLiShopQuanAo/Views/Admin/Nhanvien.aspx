@@ -11,15 +11,15 @@
             <div class="col-md-4">
                 <div class="mb-3">
         <label for="" class="form-label text-success">Ma Nhan Vien</label>
-        <input type="text"  placeholder="Title" autocomplete="off" class="form-control" runat="server" id="MaNv"/>
+        <input type="text"  placeholder="Title" autocomplete="off" class="form-control" runat="server" id="Manhanvien"/>
                 </div>
                 <div class="mb-3">
         <label for="" class="form-label text-success">Ten Nhan Vien</label>
-        <input type="text"  placeholder="Title" autocomplete="off" class="form-control" runat="server" id="TenNv"/>
+        <input type="text"  placeholder="Title" autocomplete="off" class="form-control" runat="server" id="Tennhanvien"/>
                 </div>
                   <div class="mb-3">
         <label for="" class="form-label text-success">Gioi Tinh</label>
-        <asp:DropDownList  runat="server" class="form-control" ID="Gioitinhnv">
+        <asp:DropDownList  runat="server" class="form-control" ID="Gioitinh">
                      <asp:ListItem>Nam</asp:ListItem>
                       <asp:ListItem>Nu</asp:ListItem>
         </asp:DropDownList>
@@ -27,7 +27,7 @@
                 
                    <div class="mb-3">
         <label for="" class="form-label text-success">Dia Chi</label>
-                       <asp:DropDownList ID="DiachiNv" runat="server" class="form-control" >
+                       <asp:DropDownList ID="Diachi" runat="server" class="form-control" >
                           <asp:ListItem>Thanh Khe</asp:ListItem>
                           <asp:ListItem>Hai Chau</asp:ListItem>
                           <asp:ListItem>Son Tra</asp:ListItem>
@@ -38,12 +38,12 @@
                        </div>
                    <div class="mb-3">
         <label for="" class="form-label text-success">Dien Thoai</label>
-        <input type="text"  placeholder="Title" autocomplete="off" class="form-control" runat="server" id="DienthoaiNv"/>
+        <input type="text"  placeholder="Title" autocomplete="off" class="form-control" runat="server" id="Dienthoai"/>
                 </div>
                  <div class="mb-3">
 
         <label for="" class="form-label text-success">Ngay Sinh</label>
-        <input type="text"  placeholder="Ngay sinh (dd/MM/yyyy)" autocomplete="off" class="form-control" runat="server" id="NgaysinhNv"/>
+        <input type="text"  placeholder="Ngay sinh (dd/MM/yyyy)" autocomplete="off" class="form-control" runat="server" id="Ngaysinh"/>
                 </div>
                 <div class="row">
                     <asp:Label runat="server" ID="ErrMsg" class="text-danger text-center"> </asp:Label>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="col-md-8">
-                         <asp:GridView ID="AuthorList" runat="server"  Width="849px" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="false" AutoGenerateSelectButton="True" OnSelectedIndexChanged="AuthorList_SelectedIndexChanged1">
+                         <asp:GridView ID="NhanVienList" runat="server"  Width="849px" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="false" AutoGenerateSelectButton="True" OnSelectedIndexChanged="NhanVienList_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="Manhanvien" HeaderText="Mã nhân viên" />
                     <asp:BoundField DataField="Tennhanvien" HeaderText="Tên nhân viên" />
@@ -79,3 +79,5 @@
         </div>
     </div>
 </asp:Content>
+
+

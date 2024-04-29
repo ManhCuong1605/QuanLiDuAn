@@ -13,40 +13,40 @@ namespace QuanLiShopQuanAo.Views.BanHang {
     public partial class Banhang {
         
         /// <summary>
-        /// Text1 control.
+        /// Machatlieu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Machatlieu;
         
         /// <summary>
-        /// Text3 control.
+        /// Soluong control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Soluong;
         
         /// <summary>
-        /// Text2 control.
+        /// Dongiaban control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Dongiaban;
         
         /// <summary>
-        /// ClothesList control.
+        /// BanHangList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ClothesList;
+        protected global::System.Web.UI.WebControls.GridView BanHangList;
         
         /// <summary>
         /// HoadonList control.

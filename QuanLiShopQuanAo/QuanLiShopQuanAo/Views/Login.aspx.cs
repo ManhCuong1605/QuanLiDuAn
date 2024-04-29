@@ -29,7 +29,7 @@ namespace QuanLiShopQuanAo.Views
             string connectionString = ConfigurationManager.ConnectionStrings["Connections"]?.ConnectionString;
             if (string.IsNullOrEmpty(connectionString))
             {
-                ErrMsg.Text = "Chuỗi kết nối đến cơ sở dữ liệu không hợp lệ!";
+                ErrMsg.Text = "kết nối đến cơ sở dữ liệu không hợp lệ!";
                 return;
             }
 
@@ -54,17 +54,9 @@ namespace QuanLiShopQuanAo.Views
                         }
                         else
                         {
-                            DataTable dt = myCon.GetData(qry); // Corrected call to GetData method
-                            if (dt.Rows.Count > 0)
-                            {
-                                Namenv = Usermailname.Value;
-                                User = Convert.ToInt32(dt.Rows[0][0].ToString());
-                                Response.Redirect("Admin/Nhanvien.aspx");
-                            }
-                            else
-                            {
-                                Response.Redirect("Admin/Clothes.aspx");
-                            }
+                            Namenv = Usermailname.Value;
+                            User = Convert.ToInt32(sdr["ID"]);
+                            Response.Redirect("Admin/Nhanvien.aspx");
                         }
                     }
                     else
@@ -78,6 +70,7 @@ namespace QuanLiShopQuanAo.Views
                 }
             }
         }
+
 
         protected void Dangki_Click(object sender, EventArgs e)
         {

@@ -14,39 +14,37 @@ namespace QuanLiShopQuanAo.Views.Admin
             myCon = new Models.DBClass();
             if (!IsPostBack)
             {
-                ShowAuthor();
+                ShowNhanVien();
             }
         }
 
-        private void ShowAuthor()
+        private void ShowNhanVien()
         {
             string Query = "SELECT * FROM dbo.Nhanvien";
-            AuthorList.DataSource = myCon.GetData(Query);
-            AuthorList.DataBind();
+            NhanVienList.DataSource = myCon.GetData(Query);
+            NhanVienList.DataBind();
         }
 
         protected void SaveBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrEmpty(MaNv.Value) || Gioitinhnv.SelectedIndex == -1 || DiachiNv.SelectedIndex == -1)
+                if (string.IsNullOrEmpty(Manhanvien.Value) || Gioitinh.SelectedIndex == -1 || Diachi.SelectedIndex == -1)
                 {
                     ErrMsg.Text = "Không có dữ liệu ";
                 }
                 else
                 {
-                    string Ma = MaNv.Value;
-                    string Ten = TenNv.Value;
-                    string Gioitinh = Gioitinhnv.SelectedValue;
-                    string Diachi = DiachiNv.SelectedValue;
-                    string Dienthoai = DienthoaiNv.Value;
-                    string Ngaysinh = NgaysinhNv.Value;
+                    string Ma = Manhanvien.Value;
+                    string Ten = Tennhanvien.Value;
+                    string GioitinhNV = Gioitinh.SelectedValue;
+                    string DiachiNV = Diachi.SelectedValue;
+                    string DienthoaiNV = Dienthoai.Value;
+                    string NgaysinhNV = Ngaysinh.Value;
 
-                    // Kiểm tra định dạng ngày tháng
                     DateTime ngaySinh;
-                    if (DateTime.TryParseExact(Ngaysinh, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngaySinh))
+                    if (DateTime.TryParseExact(NgaysinhNV, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngaySinh))
                     {
-                        // Nếu ngày tháng hợp lệ, thực hiện thêm vào cơ sở dữ liệu
                         string NgaysinhFormatted = ngaySinh.ToString("yyyy-MM-dd");
 
                         string Query = "INSERT INTO dbo.Nhanvien VALUES (@Ma, @Ten, @Gioitinh, @Diachi, @Dienthoai, @Ngaysinh)";
@@ -61,19 +59,18 @@ namespace QuanLiShopQuanAo.Views.Admin
                         };
 
                         myCon.SetData(Query, parameters);
-                        ShowAuthor();
+                        ShowNhanVien();
                         ErrMsg.Text = "Đã thêm thành công";
-                        MaNv.Value = "";
-                        TenNv.Value = "";
-                        Gioitinhnv.SelectedIndex = -1;
-                        DiachiNv.SelectedIndex = -1;
-                        DienthoaiNv.Value = "";
-                        NgaysinhNv.Value = "";
+                        Manhanvien.Value = "";
+                        Tennhanvien.Value = "";
+                        Gioitinh.SelectedIndex = -1;
+                        Diachi.SelectedIndex = -1;
+                        Dienthoai.Value = "";
+                        Ngaysinh.Value = "";
 
                     }
                     else
                     {
-                        // Ngày tháng không hợp lệ, thông báo cho người dùng
                         ErrMsg.Text = "Dữ liệu không hợp lệ. Vui lòng nhập theo dạng dd/MM/yyyy .";
                     }
                 }
@@ -84,38 +81,36 @@ namespace QuanLiShopQuanAo.Views.Admin
             }
         }
 
-        protected void AuthorList_SelectedIndexChanged1(object sender, EventArgs e)
+        protected void NhanVienList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MaNv.Value = AuthorList.SelectedRow.Cells[1].Text;
-            TenNv.Value = AuthorList.SelectedRow.Cells[2].Text;
-            Gioitinhnv.SelectedValue = AuthorList.SelectedRow.Cells[3].Text;
-            DiachiNv.SelectedValue = AuthorList.SelectedRow.Cells[4].Text;
-            DienthoaiNv.Value = AuthorList.SelectedRow.Cells[5].Text;
-            NgaysinhNv.Value = AuthorList.SelectedRow.Cells[6].Text;
+            Manhanvien.Value = NhanVienList.SelectedRow.Cells[1].Text;
+            Tennhanvien.Value = NhanVienList.SelectedRow.Cells[2].Text;
+            Gioitinh.SelectedValue = NhanVienList.SelectedRow.Cells[3].Text;
+            Diachi.SelectedValue = NhanVienList.SelectedRow.Cells[4].Text;
+            Dienthoai.Value = NhanVienList.SelectedRow.Cells[5].Text;
+            Ngaysinh.Value = NhanVienList.SelectedRow.Cells[6].Text;
         }
 
         protected void UpdateBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrEmpty(MaNv.Value) || Gioitinhnv.SelectedIndex == -1 || DiachiNv.SelectedIndex == -1)
+                if (string.IsNullOrEmpty(Manhanvien.Value) || Gioitinh.SelectedIndex == -1 || Diachi.SelectedIndex == -1)
                 {
                     ErrMsg.Text = "Không thấy dữ liệu ";
                 }
                 else
                 {
-                    string Ma = MaNv.Value;
-                    string Ten = TenNv.Value;
-                    string Gioitinh = Gioitinhnv.SelectedValue;
-                    string Diachi = DiachiNv.SelectedValue;
-                    string Dienthoai = DienthoaiNv.Value;
-                    string Ngaysinh = NgaysinhNv.Value;
+                    string Ma = Manhanvien.Value;
+                    string Ten = Tennhanvien.Value;
+                    string GioitinhNV = Gioitinh.SelectedValue;
+                    string DiachiNV = Diachi.SelectedValue;
+                    string DienthoaiNV = Dienthoai.Value;
+                    string NgaysinhNV = Ngaysinh.Value;
 
-                    // Kiểm tra định dạng ngày tháng
                     DateTime ngaySinh;
-                    if (DateTime.TryParseExact(Ngaysinh, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngaySinh))
+                    if (DateTime.TryParseExact(NgaysinhNV, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngaySinh))
                     {
-                        // Nếu ngày tháng hợp lệ, thực hiện cập nhật vào cơ sở dữ liệu
                         string NgaysinhFormatted = ngaySinh.ToString("dd/MM/yyyy");
 
                         string Query = "UPDATE dbo.Nhanvien SET Tennhanvien = @Ten, Gioitinh = @Gioitinh, Diachi = @Diachi, Dienthoai = @Dienthoai, Ngaysinh = @Ngaysinh WHERE Manhanvien = @Ma";
@@ -130,18 +125,17 @@ namespace QuanLiShopQuanAo.Views.Admin
                         };
 
                         myCon.SetData(Query, parameters);
-                        ShowAuthor();
+                        ShowNhanVien();
                         ErrMsg.Text = "Đã cập nhật thành công";
-                        MaNv.Value = "";
-                        TenNv.Value = "";
-                        Gioitinhnv.SelectedIndex = -1;
-                        DiachiNv.SelectedIndex = -1;
-                        DienthoaiNv.Value = "";
-                        NgaysinhNv.Value = "";
+                        Manhanvien.Value = "";
+                        Tennhanvien.Value = "";
+                        Gioitinh.SelectedIndex = -1;
+                        Diachi.SelectedIndex = -1;
+                        Dienthoai.Value = "";
+                        Ngaysinh.Value = "";
                     }
                     else
                     {
-                        // Ngày tháng không hợp lệ, thông báo cho người dùng
                         ErrMsg.Text = "Dữ liệu không hợp lệ. Vui lòng nhập theo dạng dd/MM/yyyy .";
                     }
                 }
@@ -156,15 +150,14 @@ namespace QuanLiShopQuanAo.Views.Admin
         {
             try
             {
-                if (string.IsNullOrEmpty(MaNv.Value) || Gioitinhnv.SelectedIndex == -1 || DiachiNv.SelectedIndex == -1)
+                if (string.IsNullOrEmpty(Manhanvien.Value) || Gioitinh.SelectedIndex == -1 || Diachi.SelectedIndex == -1)
                 {
                     ErrMsg.Text = "Chọn một nhân viên";
                 }
                 else
                 {
-                    string Ma = MaNv.Value;
+                    string Ma = Manhanvien.Value;
 
-                    // Xóa tất cả các hóa đơn liên quan đến nhân viên
                     string deleteHDBanQuery = "DELETE FROM dbo.HDBan WHERE Manhanvien = @Ma";
                     SqlParameter[] deleteHDBanParameters = new SqlParameter[]
                     {
@@ -172,7 +165,6 @@ namespace QuanLiShopQuanAo.Views.Admin
                     };
                     myCon.SetData(deleteHDBanQuery, deleteHDBanParameters);
 
-                    // Sau đó, xóa nhân viên
                     string Query = "DELETE FROM dbo.Nhanvien WHERE Manhanvien = @Ma";
                     SqlParameter[] Parameters = new SqlParameter[]
                     {
@@ -180,14 +172,14 @@ namespace QuanLiShopQuanAo.Views.Admin
                     };
                     myCon.SetData(Query, Parameters);
 
-                    ShowAuthor();
+                    ShowNhanVien();
                     ErrMsg.Text = "Đã xóa thành công";
-                    MaNv.Value = "";
-                    TenNv.Value = "";
-                    Gioitinhnv.SelectedIndex = -1;
-                    DiachiNv.SelectedIndex = -1;
-                    DienthoaiNv.Value = "";
-                    NgaysinhNv.Value = "";
+                    Manhanvien.Value = "";
+                    Tennhanvien.Value = "";
+                    Gioitinh.SelectedIndex = -1;
+                    Diachi.SelectedIndex = -1;
+                    Dienthoai.Value = "";
+                    Ngaysinh.Value = "";
                 }
             }
             catch (Exception ex)
@@ -198,4 +190,5 @@ namespace QuanLiShopQuanAo.Views.Admin
         }
     }
 }
+
 

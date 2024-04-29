@@ -13,58 +13,58 @@ namespace QuanLiShopQuanAo.Views.Admin {
     public partial class Nhanvien {
         
         /// <summary>
-        /// MaNv control.
+        /// Manhanvien control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText MaNv;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Manhanvien;
         
         /// <summary>
-        /// TenNv control.
+        /// Tennhanvien control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText TenNv;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Tennhanvien;
         
         /// <summary>
-        /// Gioitinhnv control.
+        /// Gioitinh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Gioitinhnv;
+        protected global::System.Web.UI.WebControls.DropDownList Gioitinh;
         
         /// <summary>
-        /// DiachiNv control.
+        /// Diachi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DiachiNv;
+        protected global::System.Web.UI.WebControls.DropDownList Diachi;
         
         /// <summary>
-        /// DienthoaiNv control.
+        /// Dienthoai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText DienthoaiNv;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Dienthoai;
         
         /// <summary>
-        /// NgaysinhNv control.
+        /// Ngaysinh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText NgaysinhNv;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Ngaysinh;
         
         /// <summary>
         /// ErrMsg control.
@@ -103,12 +103,12 @@ namespace QuanLiShopQuanAo.Views.Admin {
         protected global::System.Web.UI.WebControls.Button DeleteBtn;
         
         /// <summary>
-        /// AuthorList control.
+        /// NhanVienList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView AuthorList;
+        protected global::System.Web.UI.WebControls.GridView NhanVienList;
     }
 }

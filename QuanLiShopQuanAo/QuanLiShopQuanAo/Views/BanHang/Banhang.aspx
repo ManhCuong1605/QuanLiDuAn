@@ -10,19 +10,19 @@
                     <div class="col">
                         <div class="mt-3">
                             <label for="" class="form-label text-success">Mã quần áo</label>
-                            <input type="text" placeholder="Quan ao" autocomplete="off" class="form-control" runat="server" />
+                            <input type="text" placeholder="Mã quần áo" autocomplete="off" class="form-control" runat="server" />
                         </div>
                     </div>
                     <div class="col">
                         <div class="mt-3">
                             <label for="" class="form-label text-success">Mã Nhóm</label>
-                            <input type="text" placeholder="Gia quan ao" autocomplete="off" class="form-control" runat="server" />
+                            <input type="text" placeholder="Mã nhóm" autocomplete="off" class="form-control" runat="server" />
                         </div>
                     </div>
                     <div class="col">
                         <div class="mt-3">
                             <label for="" class="form-label text-success">Tên Quần Áo</label>
-                            <input type="text" placeholder="Gia quan ao" autocomplete="off" class="form-control" runat="server" />
+                            <input type="text" placeholder="Tên quần áo" autocomplete="off" class="form-control" runat="server" />
                         </div>
                     </div>
                 </div>
@@ -31,26 +31,26 @@
                     <div class="col">
                         <div class="mt-3">
                             <label for="" class="form-label text-success">Mã Chất Liệu</label>
-                            <input type="text" placeholder="Quan ao" autocomplete="off" class="form-control" id="Text1" runat="server" />
+                            <input type="text" placeholder="Mã chất liệu" autocomplete="off" class="form-control" id="Machatlieu" runat="server" />
                         </div>
                     </div>
                     <div class="col">
                         <div class="mt-3">
                             <label for="" class="form-label text-success">Số Lượng</label>
-                            <input type="text" placeholder="Quan ao" autocomplete="off" class="form-control" id="Text3" runat="server" />
+                            <input type="text" placeholder="Số lượng" autocomplete="off" class="form-control" id="Soluong" runat="server" />
                         </div>
                     </div>
                     <div class="col">
                         <div class="mt-3">
                             <label for="" class="form-label text-success">Giá Bán</label>
-                            <input type="text" placeholder="Gia quan ao" autocomplete="off" class="form-control" id="Text2" runat="server" />
+                            <input type="text" placeholder="Giá bán" autocomplete="off" class="form-control" id="Dongiaban" runat="server" />
                         </div>
                     </div>
                 </div>
 
                 <h4 class="text-center" style="color: teal; margin-top: 20px;">Chi Tiết Quần Áo</h4>
                 <div class="col">
-                    <asp:GridView ID="ClothesList" runat="server" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="false" AutoGenerateSelectButton="True" OnSelectedIndexChanged="ClothesList_SelectedIndexChanged1">
+                    <asp:GridView ID="BanHangList" runat="server" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="false" AutoGenerateSelectButton="True" OnSelectedIndexChanged="BanHangList_SelectedIndexChanged1">
                         <Columns>
                             <asp:BoundField DataField="Mahang" HeaderText="Mã quần áo" />
                             <asp:BoundField DataField="Manhom" HeaderText="Mã nhóm" />
@@ -80,7 +80,7 @@
             <div class="col-md-5">
                 <h4 class="text-center" style="color: crimson;">Hóa Đơn</h4>
                 <div class="col">
-                    <asp:GridView ID="HoadonList" runat="server" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="false" AutoGenerateSelectButton="True" OnSelectedIndexChanged="ClothesList_SelectedIndexChanged1">
+                    <asp:GridView ID="HoadonList" runat="server" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="false" AutoGenerateSelectButton="True" OnSelectedIndexChanged="BanHangList_SelectedIndexChanged1">
                         <Columns>
                             <asp:BoundField DataField="Mahang" HeaderText="Mã quần áo" />
                             <asp:BoundField DataField="Manhom" HeaderText="Mã nhóm" />
@@ -112,3 +112,4 @@
         </div>
     </div>
 </asp:Content>
+

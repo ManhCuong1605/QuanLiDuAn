@@ -15,7 +15,7 @@ namespace QuanLiShopQuanAo.Views
         protected void Dangki_Click(object sender, EventArgs e)
         {
           
-            if (string.IsNullOrEmpty(UnameTb.Value) || string.IsNullOrEmpty(PasswordTb.Value) || string.IsNullOrEmpty(HovatenTb.Value) || string.IsNullOrEmpty(DiachiTb.Value) || string.IsNullOrEmpty(SdtTb.Value))
+            if (string.IsNullOrEmpty(UnameNb.Value) || string.IsNullOrEmpty(PasswordNb.Value) || string.IsNullOrEmpty(HovatenNb.Value) || string.IsNullOrEmpty(DiachiNb.Value) || string.IsNullOrEmpty(SdtNb.Value))
             {
                 ErrMsg.Text = "Vui lòng nhập đầy đủ thông tin!";
                 return;
@@ -36,11 +36,11 @@ namespace QuanLiShopQuanAo.Views
 
                 using (SqlCommand command = new SqlCommand(qry, myCon))
                 {
-                    command.Parameters.AddWithValue("@Username", UnameTb.Value);
-                    command.Parameters.AddWithValue("@Password", PasswordTb.Value);
-                    command.Parameters.AddWithValue("@Tenkhach", HovatenTb.Value);
-                    command.Parameters.AddWithValue("@Diachi", DiachiTb.Value);
-                    command.Parameters.AddWithValue("@Dienthoai", SdtTb.Value);
+                    command.Parameters.AddWithValue("@Username", UnameNb.Value);
+                    command.Parameters.AddWithValue("@Password", PasswordNb.Value);
+                    command.Parameters.AddWithValue("@Tenkhach", HovatenNb.Value);
+                    command.Parameters.AddWithValue("@Diachi", DiachiNb.Value);
+                    command.Parameters.AddWithValue("@Dienthoai", SdtNb.Value);
 
                     try
                     {

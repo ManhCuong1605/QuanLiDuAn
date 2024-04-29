@@ -16,7 +16,7 @@ namespace QuanLiShopQuanAo.Views.BanHang
             myCon = new Models.DBClass();
             if (!IsPostBack)
             {
-                ShowClothes();
+                ShowBanHang();
                 DataTable dt = new DataTable();
                 dt.Columns.AddRange(new DataColumn[5]
                 {
@@ -36,15 +36,15 @@ namespace QuanLiShopQuanAo.Views.BanHang
             HoadonList.DataSource = ViewState["HoaDon"];
             HoadonList.DataBind();
         }
-        private void ShowClothes()
+        private void ShowBanHang()
         {
             string Query = "SELECT * FROM dbo.Hang";
-            ClothesList.DataSource = myCon.GetData(Query);
-            ClothesList.DataBind();
+            BanHangList.DataSource = myCon.GetData(Query);
+            BanHangList.DataBind();
         }
-        protected void ClothesList_SelectedIndexChanged1(object sender, EventArgs e)
+        protected void BanHangList_SelectedIndexChanged1(object sender, EventArgs e)
         {
-               
+
         }
     }
 }

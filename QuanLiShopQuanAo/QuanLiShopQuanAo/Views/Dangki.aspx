@@ -25,24 +25,24 @@
                         </div>
                     </div>
                     <div class="mt-3">
-                        <label for="HovatenTb" class="form-label">Họ và tên</label>
-                       <input type="text" placeholder="Họ và tên" autocomplete="off" class="form-control" id="HovatenTb" runat="server"/>
+                        <label for="HovatenNb" class="form-label">Họ và tên</label>
+                       <input type="text" placeholder="Họ và tên" autocomplete="off" class="form-control" id="HovatenNb" runat="server"/>
                     </div>
                     <div class="mt-3">
-                        <label for="UnameTb" class="form-label">User Name</label>
-                       <input type="text" placeholder="User Name" autocomplete="off" class="form-control" id="UnameTb" runat="server"/>
+                        <label for="UnameNb" class="form-label">User Name</label>
+                       <input type="text" placeholder="User Name" autocomplete="off" class="form-control" id="UnameNb" runat="server"/>
                     </div>
                     <div class="mt-3">
-                        <label for="PasswordTb" class="form-label">Password</label>
-                       <input type="password" placeholder="Password" autocomplete="off" class="form-control" id="PasswordTb" runat="server"/>
+                        <label for="PasswordNb" class="form-label">Password</label>
+                       <input type="password" placeholder="Password" autocomplete="off" class="form-control" id="PasswordNb" runat="server"/>
                     </div>
                     <div class="mt-3">
-                        <label for="SdtTb" class="form-label">Số điện thoại</label>
-                       <input type="text" placeholder="Số điện thoại" autocomplete="off" class="form-control" id="SdtTb" runat="server"/>
+                        <label for="SdtNb" class="form-label">Số điện thoại</label>
+                       <input type="text" placeholder="Số điện thoại" autocomplete="off" class="form-control" id="SdtNb" runat="server"/>
                     </div>
                     <div class="mt-3">
-                        <label for="DiachiTb" class="form-label">Địa chỉ</label>
-                       <input type="text" placeholder="Địa chỉ" autocomplete="off" class="form-control" id="DiachiTb" runat="server"/>
+                        <label for="DiachiNb" class="form-label">Địa chỉ</label>
+                       <input type="text" placeholder="Địa chỉ" autocomplete="off" class="form-control" id="DiachiNb" runat="server"/>
                     </div>
                     <div class="mt-3 d-grid">
                         <asp:Button Text="Đăng kí" runat="server" CssClass="btn-success btn" ID="Dangkibtn" OnClick="Dangki_Click" />

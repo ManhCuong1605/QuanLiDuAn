@@ -22,49 +22,49 @@ namespace QuanLiShopQuanAo.Views {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// HovatenTb control.
+        /// HovatenNb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText HovatenTb;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText HovatenNb;
         
         /// <summary>
-        /// UnameTb control.
+        /// UnameNb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText UnameTb;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText UnameNb;
         
         /// <summary>
-        /// PasswordTb control.
+        /// PasswordNb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword PasswordTb;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword PasswordNb;
         
         /// <summary>
-        /// SdtTb control.
+        /// SdtNb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText SdtTb;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText SdtNb;
         
         /// <summary>
-        /// DiachiTb control.
+        /// DiachiNb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText DiachiTb;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText DiachiNb;
         
         /// <summary>
         /// Dangkibtn control.
