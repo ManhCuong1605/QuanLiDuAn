@@ -6,7 +6,7 @@
 <head runat="server">
      <title></title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-
+    <link href="../../Assets/Lib/css/bootstrap-grid.css" rel="stylesheet" />
     <style>
         * {
             font-family: 'Poppins', sans-serif;
@@ -32,9 +32,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-2" id="left">
-                <div style="height:47px; width: 175px;">
-                    <img src="../../Assets/Images/icons8-line-64.png"/>
-                </div>
+             
                 <div class="">
 
                 </div>

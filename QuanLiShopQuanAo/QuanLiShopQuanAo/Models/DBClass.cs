@@ -7,8 +7,10 @@ using System.Web;
 
 namespace QuanLiShopQuanAo.Models
 {
+
     public class DBClass
     {
+        public static DataTable tbGioHang = new DataTable();
         private SqlConnection myCon;
         private SqlCommand cmd;
         private DataTable dt;

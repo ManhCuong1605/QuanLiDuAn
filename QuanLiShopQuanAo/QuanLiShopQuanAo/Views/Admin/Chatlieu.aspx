@@ -11,11 +11,11 @@
             <div class="col-md-4">
                 <div class="mb-3">
         <label for="" class="form-label text-success">Ma  chat lieu</label>
-        <input type="text"  placeholder="Title" autocomplete="off" class="form-control" runat="server" id="MachatlieuN"/>
+        <input type="text"  placeholder="Ma chat lieu" autocomplete="off" class="form-control" runat="server" id="MachatlieuN"/>
                 </div>
                   <div class="mb-3">
         <label for="" class="form-label text-success">Ten chat lieu </label>
-        <input type="text"  placeholder="Description" autocomplete="off" class="form-control" runat="server" id="Tenchatlieu"/>       
+        <input type="text"  placeholder="Ten chat lieu" autocomplete="off" class="form-control" runat="server" id="Tenchatlieu"/>       
                 </div>
               
                 <div class="row">

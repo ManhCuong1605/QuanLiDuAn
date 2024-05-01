@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\chup-hinh-sang-tao-2.jpg" />
     <Content Include="Assets\Images\icons8-administrator-male-52 %281%29.png" />
     <Content Include="Assets\Images\icons8-billing-machine-100.png" />
     <Content Include="Assets\Images\icons8-cancel-52.png" />
@@ -81,6 +82,11 @@
     <Content Include="Assets\Images\icons8-search-64.png" />
     <Content Include="Assets\Images\icons8-trouser-100.png" />
     <Content Include="Assets\Images\icons8-user-typing-using-typewriter-64.png" />
+    <Content Include="Assets\Images\in-ao-hoat-hinh-lay-ngay-tanbinh %282%29.jpg" />
+    <Content Include="Assets\Images\istockphoto-1354020635-612x612.jpg" />
+    <Content Include="Assets\Images\istockphoto-915923400-612x612.jpg" />
+    <Content Include="Assets\Images\quan-dui-nam-sooc-cap-chun-trang-1.png" />
+    <Content Include="Assets\Images\sm00300-800x800.jpg" />
     <Content Include="Assets\Images\Thiet-ke-shop-quan-ao-nu-nho-dep-vua-tiet-kiem-khong-gian-vua-tang-suc-canh-tranh.png" />
     <Content Include="Assets\Lib\css\bootstrap-grid.css" />
     <Content Include="Assets\Lib\css\bootstrap-grid.min.css" />
@@ -98,6 +104,7 @@
     <Content Include="Assets\Lib\css\bootstrap.min.css" />
     <Content Include="Assets\Lib\css\bootstrap.rtl.css" />
     <Content Include="Assets\Lib\css\bootstrap.rtl.min.css" />
+    <Content Include="Assets\Lib\css\cssAdmin.css" />
     <Content Include="Assets\Lib\js\bootstrap.bundle.js" />
     <Content Include="Assets\Lib\js\bootstrap.bundle.min.js" />
     <Content Include="Assets\Lib\js\bootstrap.esm.js" />
@@ -110,6 +117,9 @@
     <Content Include="Views\Admin\Khachhang.aspx" />
     <Content Include="Views\Admin\Nguoidung.aspx" />
     <Content Include="Views\Admin\Nhanvien.aspx" />
+    <Content Include="Views\BanHang\ChiTietSanPham.aspx" />
+    <Content Include="Views\BanHang\GioHang.aspx" />
+    <Content Include="Views\BanHang\QuanAo.aspx" />
     <Content Include="Views\Dangki.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\BanHang\Banhang.aspx" />
@@ -165,6 +175,27 @@
     <Compile Include="Views\Admin\Nhanvien.aspx.designer.cs">
       <DependentUpon>Nhanvien.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\BanHang\ChiTietSanPham.aspx.cs">
+      <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BanHang\ChiTietSanPham.aspx.designer.cs">
+      <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BanHang\GioHang.aspx.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BanHang\GioHang.aspx.designer.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BanHang\QuanAo.aspx.cs">
+      <DependentUpon>QuanAo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BanHang\QuanAo.aspx.designer.cs">
+      <DependentUpon>QuanAo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dangki.aspx.cs">
       <DependentUpon>Dangki.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -217,6 +248,7 @@
     <Content Include="Assets\Lib\js\bootstrap.esm.min.js.map" />
     <Content Include="Assets\Lib\js\bootstrap.js.map" />
     <Content Include="Assets\Lib\js\bootstrap.min.js.map" />
+    <None Include="Assets\Images\quan-jean-nam-10s21dpa006cr2-d-grey-_1__1_jpg" />
     <None Include="packages.config" />
     <Content Include="Views\Admin\Admin.Master" />
     <Content Include="Views\BanHang\Nguoiban.Master" />
