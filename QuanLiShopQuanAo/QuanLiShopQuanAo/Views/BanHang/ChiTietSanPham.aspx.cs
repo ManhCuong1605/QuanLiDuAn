@@ -131,7 +131,7 @@ namespace QuanLiShopQuanAo.Views.BanHang
 
         protected void CloseBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("QuanAo.aspx");
         }
     }
 }

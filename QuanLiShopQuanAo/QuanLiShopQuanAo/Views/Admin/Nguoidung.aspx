@@ -10,11 +10,11 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="mb-3">
-                    <label for="" class="form-label text-success">Username</label>
+                    <label for="" class="form-label text-success">Tài Khoản</label>
                     <input type="text"  placeholder="Username" autocomplete="off" class="form-control" runat="server" id="Usernamend"/>
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-label text-success">Password</label>
+                    <label for="" class="form-label text-success">Mật khẩu</label>
                     <input type="text"  placeholder="Password" autocomplete="off" class="form-control" runat="server" id="Passwordnd"/>       
                 </div>
               

@@ -48,7 +48,7 @@ namespace QuanLiShopQuanAo.Views
                     if (sdr.Read())
                     {
                         Session["Username"] = Usermailname.Value;
-                        if (Usermailname.Value == "Admin@gmail.com")
+                        if (Usermailname.Value == "admin")
                         {
                             Response.Redirect("Admin/Nhanvien.aspx");
                         }
@@ -56,7 +56,7 @@ namespace QuanLiShopQuanAo.Views
                         {
                             Namenv = Usermailname.Value;
                             User = Convert.ToInt32(sdr["ID"]);
-                            Response.Redirect("Admin/Nhanvien.aspx");
+                            Response.Redirect("Banhang/QuanAo.aspx");
                         }
                     }
                     else

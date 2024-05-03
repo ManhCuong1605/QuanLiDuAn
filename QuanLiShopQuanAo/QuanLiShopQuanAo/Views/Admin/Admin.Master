@@ -4,7 +4,7 @@
 
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Admin.master</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
 
     <style>
@@ -20,7 +20,11 @@
             color:white;
 
         }
-       
+        .username-label {
+        font-size: 1.5em;
+        color: #FAD550;
+        }
+
         </style>
 
     <link href="../../Assets/Lib/css/bootstrap.rtl.min.css" rel="stylesheet" />
@@ -30,52 +34,115 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-2" id="left">
-                <div style="height:120px">
-                    <img src="../../Assets/Images/icons8-line-64.png"/>
-                </div>
-                <div class="">
+    <div class="row">
+        <div class="col-2" id="left">
+            <div style="height:120px">
+                        <div class="mb-3">
+             
+            <a href="../Login.aspx">
+                 <img src="../../Assets/Images/icons8-male-user-100.png" height="20" width="20"/>
+                <label style="cursor:pointer">Tài khoản</label>
+            </a>
+            </div>
+                <div style="height:15px">
 
-                </div>
-                <div class="p-2">
-
+            </div>
                 <div class="mb-3">
-               <img src="../../Assets/Images/icons8-clothes-52.png" height="20" width="20"/>
-                    <a href="Clothes.aspx"><label>Quần Áo</label></a>
-                </div>
-                    <div style="height:15px">
-
-                    </div>
-
-                <div class="mb-3">
-                   <img src="../../Assets/Images/icons8-administrator-male-52%20(1).png" height="20" width="20"/>
-                <a href="Nhanvien.aspx"><label>Nhân Viên</label></a>
-                </div>
-                    <div style="height:15px">
-
-                </div>
-               
-                <div class="mb-3">
-                  <img src="../../Assets/Images/icons8-categories-60.png" height="20" width="20"/>
-                <a href="Chatlieu.aspx"><label>Chất liệu</label></a>
-                </div>
-                    <div style="height:150px">
-
-                    </div>
-                <div class="mb-3">
-                   <img src="../../Assets/Images/icons8-home-50.png" height="20" width="20"/>
-                <a href="../Login.aspx"><label>Đăng Xuất</label></a>
-                </div>
+                    <label class="username-label" style="cursor:pointer">
+                        <% if (Session["Username"] != null) { %>
+                            <%= Session["Username"].ToString() %>
+                        <% } else { %>
+                            
+                        <% } %>
+                    </label>
                 </div>
             </div>
-            <div class="col-10">
-                <form id="form1" runat="server">
-                    <asp:ContentPlaceHolder ID="MyContent" runat="server">
-                    </asp:ContentPlaceHolder>
-                </form>
+            
+            <div class="p-2">
+
+            <div class="mb-3">
+                <a href="../../Views\BanHang\QuanAo.aspx">
+                      <img src="../../Assets/Images/icons8-home-50.png" height="20" width="20" />
+                    <label style="cursor:pointer">TRANG CHỦ</label>
+                </a>
+            </div>
+                <div style="height:15px">
+
+                </div>
+
+                <div class="mb-3">
+  
+                    <a href="BanHang.aspx">
+                            <img src="../../Assets/Images/Banhang.png" height="20" width="20"/>
+                        <label style="cursor:pointer">BÁN HÀNG</label></a>
+                    </div>
+                        <div style="height:15px">
+
+                    </div>
+
+                <div class="mb-3">
+  
+                    <a href="Chatlieu.aspx">
+                            <img src="../../Assets/Images/Chatlieu.png" height="20" width="20"/>
+                        <label style="cursor:pointer">CHẤT LIỆU</label></a>
+                    </div>
+                        <div style="height:15px">
+
+                    </div>
+                <div class="mb-3">
+  
+                    <a href="Clothes.aspx">
+                            <img src="../../Assets/Images/icons8-clothes-52.png" height="20" width="20"/>
+                        <label style="cursor:pointer">CLOTHES</label></a>
+                    </div>
+                        <div style="height:15px">
+
+                    </div>
+
+            <div class="mb-3">
+              
+                    <a href="Khachhang.aspx">
+                         <img src="../../Assets/Images/khachhang.png" height="20" width="20"/>
+                        <label style="cursor:pointer">KHÁCH HÀNG</label></a>
+                    </div>
+                        <div style="height:15px">
+
+                    </div>
+
+            <div class="mb-3">
+  
+                    <a href="Nhanvien.aspx">
+                            <img src="../../Assets/Images/nhanvien.png" height="20" width="20"/>
+                        <label style="cursor:pointer">NHÂN VIÊN</label></a>
+                    </div>
+                        <div style="height:15px">
+
+                    </div>
+           
+            <div class="mb-3">
+              
+                <a href="Nguoidung.aspx">
+                    <img src="../../Assets/Images/Nguoidung.png" height="20" width="20"/>
+                    <label style="cursor:pointer">NGƯỜI DÙNG</label></a>
+                </div>
+                    <div style="height:40px">
+
+                    </div>
+            <div class="mb-3s">
+               
+            <a href="../Login.aspx">
+                <img src="../../Assets/Images/out.png" height="20" width="20"/>
+                <label style="cursor:pointer">ĐĂNG XUẤT</label></a>
+            </div>
             </div>
         </div>
+        <div class="col-10">
+            <form id="form1" runat="server">
+                <asp:ContentPlaceHolder ID="MyContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </form>
+        </div>
     </div>
+</div>
 </body>
 </html>

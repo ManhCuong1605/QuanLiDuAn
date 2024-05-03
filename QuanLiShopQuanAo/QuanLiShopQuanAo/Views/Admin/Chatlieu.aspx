@@ -10,12 +10,12 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="mb-3">
-        <label for="" class="form-label text-success">Ma  chat lieu</label>
-        <input type="text"  placeholder="Ma chat lieu" autocomplete="off" class="form-control" runat="server" id="MachatlieuN"/>
+        <label for="" class="form-label text-success">Mã Chất Liệu</label>
+        <input type="text"  placeholder="Mã chất liệu" autocomplete="off" class="form-control" runat="server" id="MachatlieuN"/>
                 </div>
                   <div class="mb-3">
-        <label for="" class="form-label text-success">Ten chat lieu </label>
-        <input type="text"  placeholder="Ten chat lieu" autocomplete="off" class="form-control" runat="server" id="Tenchatlieu"/>       
+        <label for="" class="form-label text-success">Tên Chất Liệu</label>
+        <input type="text"  placeholder="Tên chất liệu" autocomplete="off" class="form-control" runat="server" id="Tenchatlieu"/>       
                 </div>
               
                 <div class="row">

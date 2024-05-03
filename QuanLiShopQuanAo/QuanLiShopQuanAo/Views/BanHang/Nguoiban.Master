@@ -41,7 +41,7 @@
                 </div>
                     <div style="height:15px">
 
-                    </div>
+                </div>
                     <div class="mb-3">
                         <label style="cursor:pointer">
                             <% if (Session["Username"] != null) { %>
@@ -60,7 +60,7 @@
                 <div class="mb-3">
                     <a href="QuanAo.aspx">
                           <img src="../../Assets/Images/icons8-home-50.png" height="20" width="20" />
-                        <label style="cursor:pointer">Trang chủ</label>
+                        <label style="cursor:pointer">TRANG CHỦ</label>
                     </a>
                 </div>
                     <div style="height:15px">
@@ -71,7 +71,7 @@
                   
                 <a href="#">
                      <img src="../../Assets/Images/lienhe.png" height="20" width="20"/>
-                    <label style="cursor:pointer">Liên hệ</label></a>
+                    <label style="cursor:pointer">LIÊN HỆ</label></a>
                 </div>
                     <div style="height:15px">
 
@@ -81,7 +81,7 @@
                   
                 <a href="#">
                     <img src="../../Assets/Images/icons8-billing-machine-100.png" height="20" width="20"/>
-                    <label style="cursor:pointer">Thanh toán</label></a>
+                    <label style="cursor:pointer">THANH TOÁN</label></a>
                 </div>
                     <div style="height:150px">
 
@@ -90,7 +90,7 @@
                    
                 <a href="../Login.aspx">
                     <img src="../../Assets/Images/out.png" height="20" width="20"/>
-                    <label style="cursor:pointer">Đăng Xuất</label></a>
+                    <label style="cursor:pointer">ĐĂNG XUẤT</label></a>
                 </div>
                 </div>
             </div>

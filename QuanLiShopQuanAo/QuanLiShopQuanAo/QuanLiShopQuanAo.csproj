@@ -71,7 +71,12 @@
     <Content Include="Assets\Images\Aophong.jpg" />
     <Content Include="Assets\Images\Aothethao.jpg" />
     <Content Include="Assets\Images\Aothun.jpg" />
+    <Content Include="Assets\Images\Banhang.png" />
+    <Content Include="Assets\Images\Chatlieu.png" />
+    <Content Include="Assets\Images\Khachhang.png" />
     <Content Include="Assets\Images\lienhe.png" />
+    <Content Include="Assets\Images\Nguoidung.png" />
+    <Content Include="Assets\Images\Nhanvien.png" />
     <Content Include="Assets\Images\out.png" />
     <Content Include="Assets\Images\Quanjean.jpg" />
     <Content Include="Assets\Images\Quansot.png" />
@@ -120,6 +125,7 @@
     <Content Include="Views\Admin\Khachhang.aspx" />
     <Content Include="Views\Admin\Nguoidung.aspx" />
     <Content Include="Views\Admin\Nhanvien.aspx" />
+    <Content Include="Views\Admin\TrangChu.aspx" />
     <Content Include="Views\BanHang\ChiTietSanPham.aspx" />
     <Content Include="Views\BanHang\GioHang.aspx" />
     <Content Include="Views\BanHang\QuanAo.aspx" />
@@ -183,6 +189,13 @@
     </Compile>
     <Compile Include="Views\Admin\Nhanvien.aspx.designer.cs">
       <DependentUpon>Nhanvien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\TrangChu.aspx.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\TrangChu.aspx.designer.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\BanHang\ChiTietSanPham.aspx.cs">
       <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
