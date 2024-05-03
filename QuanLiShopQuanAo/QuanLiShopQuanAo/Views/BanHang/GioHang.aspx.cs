@@ -6,7 +6,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
 namespace QuanLiShopQuanAo.Views.BanHang
 {
     public partial class GioHang : System.Web.UI.Page
@@ -18,12 +17,10 @@ namespace QuanLiShopQuanAo.Views.BanHang
                 // Hiển thị danh sách sản phẩm trong giỏ hàng
                 GridView1.DataSource = DBClass.tbGioHang;
                 GridView1.DataBind();
-
                 // Tính tổng tiền và hiển thị
                 Tinhtong();
             }
         }
-
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             // Xóa sản phẩm khỏi giỏ hàng
@@ -36,7 +33,6 @@ namespace QuanLiShopQuanAo.Views.BanHang
             // Tính tổng tiền và hiển thị
             Tinhtong();
         }
-
         private void Tinhtong()
         {
             decimal total = 0;
@@ -44,10 +40,8 @@ namespace QuanLiShopQuanAo.Views.BanHang
             {
                 total += Convert.ToDecimal(row["TongTien"]);
             }
-            Tongtien.Text = "Tổng cộng: " + total.ToString("### ### ###");
+            Tongtien.Text ="Tổng cộng: " + total.ToString("### ### ###");
         }
-
-
         protected void btnDathang_Click(object sender, EventArgs e)
         {
             string username = (string)Session["Username"];
@@ -64,6 +58,6 @@ namespace QuanLiShopQuanAo.Views.BanHang
         {
             Response.Redirect("~/Views/BanHang/QuanAo.aspx");
         }
-       
+
     }
 }

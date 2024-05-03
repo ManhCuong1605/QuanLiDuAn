@@ -1,7 +1,9 @@
 ﻿using QuanLiShopQuanAo.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -29,16 +31,51 @@ namespace QuanLiShopQuanAo.Views.BanHang
                     DBClass.tbGioHang.Columns.Add("Dongia", typeof(decimal));
                     DBClass.tbGioHang.Columns.Add("SoLuong", typeof(int));
                     DBClass.tbGioHang.Columns.Add("Ghichu", typeof(string));
+                    // Thêm cột "Anh" vào DataTable
+                    DBClass.tbGioHang.Columns.Add("Anh", typeof(string)); // Đường dẫn ảnh sản phẩm
                     DBClass.tbGioHang.Columns.Add("TongTien", typeof(decimal), "SoLuong * Dongia");
                 }
+
                 lbGiohang.Text = "Giỏ hàng (" + DBClass.tbGioHang.Rows.Count + ")";
 
+                // Gọi phương thức BindDataToRepeater để gán dữ liệu cho repeater
+                BindDataToRepeater();
             }
         }
+
         protected void lbGiohang_Click(object sender, EventArgs e)
         {
             Response.Redirect("Giohang.aspx");
         }
+        protected void BindDataToRepeater()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["Connections"].ConnectionString;
+            string query = "SELECT * FROM Hang";
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    adapter.Fill(dataTable);
+                }
+                catch (Exception ex)
+                {
+
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+                rptProducts.DataSource = dataTable;
+                rptProducts.DataBind();
+            }
+        }
     }
 }
+

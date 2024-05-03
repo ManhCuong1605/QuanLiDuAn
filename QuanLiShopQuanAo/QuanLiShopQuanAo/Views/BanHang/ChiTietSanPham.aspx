@@ -19,13 +19,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MyContent" runat="server">
     <div class="container-fluid">
         <div class="row">
-
             <div class="col-12">
                 <h3 class="text-center">Chi tiết quần áo</h3>
             </div>
         </div>
         <div class="row">
-
             <div class="col-md-6">
                 <!-- Ảnh sản phẩm -->
                 <asp:Image ID="Image1" runat="server" class="img-fluid" Height="500px" Width="500px"/>
@@ -52,16 +50,17 @@
                     <asp:Label Text="Mô tả:" runat="server" CssClass="label-text" /> 
                     <asp:Label ID="lblMota" runat="server" Text="Label"></asp:Label>
                 </div>
+                <div class="mb-3">
+                    <span id="ErrorMessage" runat="server" style="color:red;font-size:30px;"></span>
+                </div>
                 <div class="col-md-8">
-        <!-- Nút "Đặt Hàng" và "Hủy" -->
+                    <!-- Nút "Đặt Hàng" và "Hủy" -->
                     <div class="mb-3 d-flex justify-content-between">
                         <asp:Button style="width:150px; height:50px; font-weight:400; font-size:20px;" class="btn btn-success" Text="Đặt Hàng" runat="server" OnClick="DathangBtn_Click" />
                         <asp:Button style="width:150px; height:50px; font-weight:400; font-size:20px;" class="btn btn-warning" Text="Hủy" runat="server" OnClick="CloseBtn_Click" />
                     </div>
                 </div>
-                <!-- Thêm các nhãn khác tương tự -->
             </div>
-            
         </div>
     </div>
 </asp:Content>

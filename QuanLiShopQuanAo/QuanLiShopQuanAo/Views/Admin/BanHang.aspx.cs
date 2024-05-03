@@ -5,10 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
-namespace QuanLiShopQuanAo.Views.BanHang
+namespace QuanLiShopQuanAo.Views.Admin
 {
-    public partial class Banhang : System.Web.UI.Page
+    public partial class BanHang : System.Web.UI.Page
     {
         private Models.DBClass myCon;
         protected void Page_Load(object sender, EventArgs e)

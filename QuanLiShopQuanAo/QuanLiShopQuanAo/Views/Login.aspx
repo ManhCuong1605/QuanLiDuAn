@@ -28,7 +28,7 @@
                     </div>
                     <div class="mt-3">
                         <label for="" class="form-label">User Name </label>
-                       <input type="Email"  placeholder="Email của bạn" autocomplete="off" class="form-control" id="Usermailname" runat="server"/>
+                       <input type="text"  placeholder="Email của bạn" autocomplete="off" class="form-control" id="Usermailname" runat="server"/>
                     </div>
                     <div class="mt-3">
                         <label for="" class="form-label">Password</label>

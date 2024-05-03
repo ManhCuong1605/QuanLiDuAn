@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLiShopQuanAo.Views.BanHang {
+namespace QuanLiShopQuanAo.Views.Admin {
     
     
-    public partial class Banhang {
+    public partial class BanHang {
         
         /// <summary>
         /// Machatlieu control.

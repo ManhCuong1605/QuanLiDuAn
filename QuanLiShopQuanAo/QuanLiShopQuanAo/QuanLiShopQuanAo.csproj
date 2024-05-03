@@ -67,7 +67,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Images\chup-hinh-sang-tao-2.jpg" />
+    <Content Include="Assets\Images\Aohoathinh.jpg" />
+    <Content Include="Assets\Images\Aophong.jpg" />
+    <Content Include="Assets\Images\Aothethao.jpg" />
+    <Content Include="Assets\Images\Aothun.jpg" />
+    <Content Include="Assets\Images\lienhe.png" />
+    <Content Include="Assets\Images\out.png" />
+    <Content Include="Assets\Images\Quanjean.jpg" />
+    <Content Include="Assets\Images\Quansot.png" />
     <Content Include="Assets\Images\icons8-administrator-male-52 %281%29.png" />
     <Content Include="Assets\Images\icons8-billing-machine-100.png" />
     <Content Include="Assets\Images\icons8-cancel-52.png" />
@@ -82,11 +89,6 @@
     <Content Include="Assets\Images\icons8-search-64.png" />
     <Content Include="Assets\Images\icons8-trouser-100.png" />
     <Content Include="Assets\Images\icons8-user-typing-using-typewriter-64.png" />
-    <Content Include="Assets\Images\in-ao-hoat-hinh-lay-ngay-tanbinh %282%29.jpg" />
-    <Content Include="Assets\Images\istockphoto-1354020635-612x612.jpg" />
-    <Content Include="Assets\Images\istockphoto-915923400-612x612.jpg" />
-    <Content Include="Assets\Images\quan-dui-nam-sooc-cap-chun-trang-1.png" />
-    <Content Include="Assets\Images\sm00300-800x800.jpg" />
     <Content Include="Assets\Images\Thiet-ke-shop-quan-ao-nu-nho-dep-vua-tiet-kiem-khong-gian-vua-tang-suc-canh-tranh.png" />
     <Content Include="Assets\Lib\css\bootstrap-grid.css" />
     <Content Include="Assets\Lib\css\bootstrap-grid.min.css" />
@@ -112,6 +114,7 @@
     <Content Include="Assets\Lib\js\bootstrap.js" />
     <Content Include="Assets\Lib\js\bootstrap.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Admin\BanHang.aspx" />
     <Content Include="Views\Admin\Chatlieu.aspx" />
     <Content Include="Views\Admin\Clothes.aspx" />
     <Content Include="Views\Admin\Khachhang.aspx" />
@@ -122,7 +125,6 @@
     <Content Include="Views\BanHang\QuanAo.aspx" />
     <Content Include="Views\Dangki.aspx" />
     <Content Include="Views\Login.aspx" />
-    <Content Include="Views\BanHang\Banhang.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -139,6 +141,13 @@
     </Compile>
     <Compile Include="Views\Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\BanHang.aspx.cs">
+      <DependentUpon>BanHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\BanHang.aspx.designer.cs">
+      <DependentUpon>BanHang.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Chatlieu.aspx.cs">
       <DependentUpon>Chatlieu.aspx</DependentUpon>
@@ -209,13 +218,6 @@
     </Compile>
     <Compile Include="Views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\BanHang\Banhang.aspx.cs">
-      <DependentUpon>Banhang.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\BanHang\Banhang.aspx.designer.cs">
-      <DependentUpon>Banhang.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\BanHang\Nguoiban.Master.cs">
       <DependentUpon>Nguoiban.Master</DependentUpon>

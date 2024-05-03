@@ -8,7 +8,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
 namespace QuanLiShopQuanAo.Views.BanHang
 {
     public partial class ChiTietSanPham : System.Web.UI.Page
@@ -25,19 +24,13 @@ namespace QuanLiShopQuanAo.Views.BanHang
                 lblMota.Text = "";
                 if (Request.QueryString["ID"] != null)
                 {
-
                     var ma = Request.QueryString["ID"].ToString();
-
-
                     if (int.TryParse(ma, out ID))
                     {
-
                         getQuanAo(ID);
                     }
                 }
-
             }
-
         }
         private void getQuanAo(int ID)
         {
@@ -79,10 +72,24 @@ namespace QuanLiShopQuanAo.Views.BanHang
             {
                 int productID = Convert.ToInt32(Request.QueryString["ID"]);
                 string productName = lblTen.Text;
-                string productCL = lblChatlieu.Text; // Thêm biến productCL
+                string productCL = lblChatlieu.Text;
                 decimal productPrice = Convert.ToDecimal(lblGia.Text);
-                int quantity = Convert.ToInt32(TbSoluong.Text);
-                string Note = lblMota.Text; // Thêm biến Note
+                int quantity;
+
+                // Kiểm tra xem người dùng đã nhập số lượng chưa
+                if (!int.TryParse(TbSoluong.Text, out quantity) || quantity <= 0)
+                {
+                    // Nếu số lượng không hợp lệ, hiển thị thông báo
+                    ErrorMessage.InnerHtml = "Vui lòng nhập số lượng sản phẩm.";
+                    return;
+                }
+                else
+                {
+                    ErrorMessage.InnerHtml = ""; // Xóa thông báo nếu số lượng hợp lệ
+                }
+
+                string Note = lblMota.Text;
+                string productImage = Image1.ImageUrl; // Lấy đường dẫn ảnh sản phẩm
 
                 // Kiểm tra sản phẩm đã tồn tại trong giỏ hàng chưa
                 bool existsInCart = false;
@@ -101,6 +108,8 @@ namespace QuanLiShopQuanAo.Views.BanHang
                 if (!existsInCart)
                 {
                     DataRow newRow = DBClass.tbGioHang.NewRow();
+                    newRow["Anh"] = productImage;
+                     // Thêm đường dẫn ảnh sản phẩm vào giỏ hàng
                     newRow["Mahang"] = productID;
                     newRow["Tenhang"] = productName;
                     newRow["Machatlieu"] = productCL;
@@ -118,7 +127,6 @@ namespace QuanLiShopQuanAo.Views.BanHang
                 Response.Redirect("GioHang.aspx");
             }
         }
-
 
 
         protected void CloseBtn_Click(object sender, EventArgs e)
