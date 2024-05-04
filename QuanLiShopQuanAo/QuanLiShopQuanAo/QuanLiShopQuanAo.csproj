@@ -73,6 +73,10 @@
     <Content Include="Assets\Images\Aothun.jpg" />
     <Content Include="Assets\Images\Banhang.png" />
     <Content Include="Assets\Images\Chatlieu.png" />
+    <Content Include="Assets\Images\Dienthoai.jpg" />
+    <Content Include="Assets\Images\Facebook.jpg" />
+    <Content Include="Assets\Images\Feedback.png" />
+    <Content Include="Assets\Images\Gmail.jpg" />
     <Content Include="Assets\Images\Khachhang.png" />
     <Content Include="Assets\Images\lienhe.png" />
     <Content Include="Assets\Images\Nguoidung.png" />
@@ -88,7 +92,7 @@
     <Content Include="Assets\Images\icons8-clothes-52.png" />
     <Content Include="Assets\Images\icons8-home-50.png" />
     <Content Include="Assets\Images\icons8-line-64.png" />
-    <Content Include="Assets\Images\icons8-location-100.png" />
+    <Content Include="Assets\Images\Location.png" />
     <Content Include="Assets\Images\icons8-male-user-100.png" />
     <Content Include="Assets\Images\icons8-save-64.png" />
     <Content Include="Assets\Images\icons8-search-64.png" />
@@ -127,7 +131,9 @@
     <Content Include="Views\Admin\Nhanvien.aspx" />
     <Content Include="Views\Admin\TrangChu.aspx" />
     <Content Include="Views\BanHang\ChiTietSanPham.aspx" />
+    <Content Include="Views\BanHang\Feedback.aspx" />
     <Content Include="Views\BanHang\GioHang.aspx" />
+    <Content Include="Views\BanHang\Lienhe.aspx" />
     <Content Include="Views\BanHang\QuanAo.aspx" />
     <Content Include="Views\Dangki.aspx" />
     <Content Include="Views\Login.aspx" />
@@ -204,12 +210,26 @@
     <Compile Include="Views\BanHang\ChiTietSanPham.aspx.designer.cs">
       <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\BanHang\Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BanHang\Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\BanHang\GioHang.aspx.cs">
       <DependentUpon>GioHang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\BanHang\GioHang.aspx.designer.cs">
       <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BanHang\Lienhe.aspx.cs">
+      <DependentUpon>Lienhe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BanHang\Lienhe.aspx.designer.cs">
+      <DependentUpon>Lienhe.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\BanHang\QuanAo.aspx.cs">
       <DependentUpon>QuanAo.aspx</DependentUpon>

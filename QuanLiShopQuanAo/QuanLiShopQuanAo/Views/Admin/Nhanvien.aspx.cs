@@ -50,12 +50,12 @@ namespace QuanLiShopQuanAo.Views.Admin
                         string Query = "INSERT INTO dbo.Nhanvien VALUES (@Ma, @Ten, @Gioitinh, @Diachi, @Dienthoai, @Ngaysinh)";
                         SqlParameter[] parameters = new SqlParameter[]
                         {
-                            new SqlParameter("@Ma", Ma),
-                            new SqlParameter("@Ten", Ten),
-                            new SqlParameter("@Gioitinh", Gioitinh),
-                            new SqlParameter("@Diachi", Diachi),
-                            new SqlParameter("@Dienthoai", Dienthoai),
-                            new SqlParameter("@Ngaysinh", NgaysinhFormatted)
+                    new SqlParameter("@Ma", Ma),
+                    new SqlParameter("@Ten", Ten),
+                    new SqlParameter("@Gioitinh", GioitinhNV),
+                    new SqlParameter("@Diachi", DiachiNV),
+                    new SqlParameter("@Dienthoai", DienthoaiNV),
+                    new SqlParameter("@Ngaysinh", NgaysinhFormatted)
                         };
 
                         myCon.SetData(Query, parameters);
@@ -111,17 +111,17 @@ namespace QuanLiShopQuanAo.Views.Admin
                     DateTime ngaySinh;
                     if (DateTime.TryParseExact(NgaysinhNV, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngaySinh))
                     {
-                        string NgaysinhFormatted = ngaySinh.ToString("dd/MM/yyyy");
+                        string NgaysinhFormatted = ngaySinh.ToString("yyyy-MM-dd");
 
                         string Query = "UPDATE dbo.Nhanvien SET Tennhanvien = @Ten, Gioitinh = @Gioitinh, Diachi = @Diachi, Dienthoai = @Dienthoai, Ngaysinh = @Ngaysinh WHERE Manhanvien = @Ma";
                         SqlParameter[] parameters = new SqlParameter[]
                         {
-                            new SqlParameter("@Ma", Ma),
-                            new SqlParameter("@Ten", Ten),
-                            new SqlParameter("@Gioitinh", Gioitinh),
-                            new SqlParameter("@Diachi", Diachi),
-                            new SqlParameter("@Dienthoai", Dienthoai),
-                            new SqlParameter("@Ngaysinh", NgaysinhFormatted)
+                    new SqlParameter("@Ma", Ma),
+                    new SqlParameter("@Ten", Ten),
+                    new SqlParameter("@Gioitinh", GioitinhNV),
+                    new SqlParameter("@Diachi", DiachiNV),
+                    new SqlParameter("@Dienthoai", DienthoaiNV),
+                    new SqlParameter("@Ngaysinh", NgaysinhFormatted)
                         };
 
                         myCon.SetData(Query, parameters);
