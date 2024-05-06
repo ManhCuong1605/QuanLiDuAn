@@ -45,8 +45,14 @@
         margin-bottom: 22px; /* Khoảng cách giữa các hàng */
     }
      h4.text-center {
-    margin-left: 30px; /* Điều chỉnh giá trị này để lùi về phía bên phải theo ý của bạn */
-}
+        margin-left: 30px; /* Điều chỉnh giá trị này để lùi về phía bên phải theo ý của bạn */
+    }
+     .detail-link {
+        display: inline-block;
+        margin-left: 175px;
+        text-decoration: none;
+        
+    }
 </style>
 
 </asp:Content>
@@ -75,6 +81,8 @@
                              <img class="product-image" src='<%# ResolveUrl("~/Assets/Images/" + Eval("Anh")) %>' />
                             </a>
                             <asp:Label style="margin-left:175px;" Text='<%# "Giá: " + Eval("Dongiaban") + "đ" %>' runat="server" />
+                            <br />
+                            <a class="text-center detail-link" href='<%# "ChiTietSanPham.aspx?ID=" + Eval("Mahang") %>'>Chi tiết</a>
                         </div>
                     </div>
                 </ItemTemplate>
@@ -82,5 +90,4 @@
         </div>
     </div>
 </asp:Content>
-
 
