@@ -61,7 +61,7 @@
             <div class="p-2">
 
             <div class="mb-3">
-                <a href="../../Views\BanHang\QuanAo.aspx">
+                <a href="TrangChu.aspx">
                       <img src="../../Assets/Images/icons8-home-50.png" height="20" width="20" />
                     <label style="cursor:pointer">TRANG CHỦ</label>
                 </a>

@@ -68,11 +68,11 @@
                     <div class="col-md-4 mb-3">
                         <div class="col-4-content">
                             <h4 class="text-center"><%# Eval("Tenhang") %></h4>
-                            <a class="text-center" href='<%# "ChiTietSanPham.aspx?ID=" + Eval("Mahang") %>'>
+                            <a class="text-center" href='<%# "../BanHang/ChiTietSanPham.aspx?ID=" + Eval("Mahang") %>'>
                              <img class="product-image" src='<%# ResolveUrl("~/Assets/Images/" + Eval("Anh")) %>' />
                             </a>
                             <asp:Label style="margin-left:175px;" Text='<%# "Giá: " + Eval("Dongiaban") + "đ" %>' runat="server" />
-                            <a class="text-center detail-link" href='<%# "ChiTietSanPham.aspx?ID=" + Eval("Mahang") %>'>Chi tiết</a>
+                            <a class="text-center detail-link" href='<%# "../BanHang/ChiTietSanPham.aspx?ID=" + Eval("Mahang")  %>'>Chi tiết</a>
                         </div>
                     </div>
                 </ItemTemplate>

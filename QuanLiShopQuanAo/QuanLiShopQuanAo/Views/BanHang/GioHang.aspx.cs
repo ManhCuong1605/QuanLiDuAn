@@ -49,10 +49,7 @@ namespace QuanLiShopQuanAo.Views.BanHang
             {
                 Response.Redirect("~/Views/Login.aspx");
             }
-            else
-            {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Viết tiếp chức năng TẠO ĐƠN HÀNG')", true);
-            }
+            
         }
         protected void btnClose_Click(object sender, EventArgs e)
         {

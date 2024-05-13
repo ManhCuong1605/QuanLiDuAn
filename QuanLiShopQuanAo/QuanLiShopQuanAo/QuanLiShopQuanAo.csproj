@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Assets\Images\Aohoathinh.jpg" />
     <Content Include="Assets\Images\Aophong.jpg" />
+    <Content Include="Assets\Images\Aosomi.jpg" />
     <Content Include="Assets\Images\Aothethao.jpg" />
     <Content Include="Assets\Images\Aothun.jpg" />
     <Content Include="Assets\Images\Banhang.png" />
